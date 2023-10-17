@@ -30,9 +30,6 @@
 
 /* PC */
 @media (min-width:1000px) {
-    .mobile{
-        display: none;
-    }
     .nav-text{
         display: flex;
         justify-content: space-evenly;
@@ -47,9 +44,6 @@
     }
 }
 @media (max-width:1000px) {
-    .pc{
-        display: none;
-    }
     .menu-icon{
         padding: 10px;
     }
