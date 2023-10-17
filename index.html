@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="nav-body">
+                <div class="nav-logo">
+                    <img class="nav-logo-img" src="media/icon/Untitled-1.png" alt="duck">
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search" maxlength="100">
+                </div>
+                <div class="nav-text pc">
+                    <h1><a href="">Home</a></h1>
+                    <h1><a href="">About</a></h1>
+                    <h1><a href="">Shop</a></h1>
+                    <h1><a href="">Contact</a></h1>
+                </div>
+                <div class="mobile">
+                    <details>
+                        <summary><div class="menu-icon"><img src="media/icon/menu.svg" alt="menu"></div>
+                        </summary>
+                        <div class="center">
+                            <div class="menu-body">
+                                <h1><a href="">Home</a></h1>
+                                <h1><a href="">About</a></h1>
+                                <h1><a href="">Shop</a></h1>
+                                <h1><a href="">Contact</a></h1>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+        </div>
+    </header>
+    
+    <section>
+        <div class="left-body">
+            <h1>Sort by</h1>
+            <div class="filter-btns">
+                <button onclick="sortA()">Alphabet</button>
+                <button onclick="sortP()">Price</button>
+            </div>
+            <div class="duckfever">
+                <button class="duck-btn" onclick="changeMode()">Duck Fever Mode</button>
+            </div>
+            <div class="add">
+                <button class="add-btn" onclick="showCreate()">Add Your Own Card</button>
+            </div>
+        </div>
+        <div class="right-body">
+            <h1 class="main-heading">List</h1>
+            <div id="addMainBody" class="product">
+            </div>
+            <div class="change-page">change</div>
+        </div>
+    </section>
+
+    <section class="absolute" id="create">
+        <div class="centerbox manrope">
+            <div class="box">
+                <form>
+                    <div class="fillin">
+                        <div class="cardCreate">
+                            <div class="header-create">
+                                <h1 class="fillin-h1-m">Create a Card!</h1>
+                            </div>
+                            <div class="inputbox">
+                                <div class="label-fillin">
+                                <label>Image (in URL)</label>
+                                </div>
+                                <input id="extactURL" class="input" type="text" name="url" maxlength="100" placeholder="Https://###.###" value="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcRlex2yeMomsbkm0qzpHjtPf8j9QLCDPLZ_brREwaQIrpsnwot3sOfn8Qr3ujA92cho">
+                            </div>
+                            <div class="inputbox">
+                                <div class="label-fillin">
+                                <label>Heading<span style="color: rgb(255, 0, 0);">*</span></label>
+                                </div>
+                                <input id="extactHeading" class="input" type="text" name="email" maxlength="20" placeholder="Product name" value="" required>
+                            </div>
+                            <div class="inputbox">
+                                <div class="label-fillin">
+                                <label>Description<span style="color: rgb(255, 0, 0);">*</span></label>
+                                </div>
+                                <input id="extactDescription" class="input" type="text" name="email" required maxlength="100" placeholder="Product Description" value="">
+                            </div>
+                            <div class="inputbox">
+                                <div class="label-fillin">
+                                <label>Location<span style="color: rgb(255, 0, 0);">*</span></label>
+                                </div>
+                                <input id="extactLocation" class="input" type="text" name="email" required maxlength="15" value="" placeholder="Selling Location">
+                            </div>
+                            <div class="inputbox">
+                                <div class="label-fillin">
+                                <label>Price<span style="color: rgb(255, 0, 0);">*</span></label>
+                                </div>
+                                <input id="extactPrice" class="input" type="number" name="email" required max="99999" value="" placeholder="Price">
+                            </div>
+                            <div class="submit-btn">
+                                <button type="submit" onclick="createCardBTN()">Submit</button>
+                                <button type="button" onclick="hideCreate()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+<!-- <div class="card">
+                    <div class="card-img bl">
+                        <img class="card-img" id="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNuq1Nmb_ZKg4MrhgkFdUxRqOGDpT-Rn4GpQ&usqp=CAU">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-top">
+                            <h1>Big Duck</h1>
+                            <h3>A big duck located somewhere in this world. The legends says that when this duck will be found, the duck army will launch their attack. The duck army shall be formed by when all the ducks in the world unite for a just cause hence resulting in a peaceful world.</h3>
+                        </div>
+                        <div class="card-text-bottom">
+                            <h2>Unknown</h2>
+                            <h2>Not For Sale</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img bl">
+                        <img class="card-img" id="card-img" src="">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-top">
+                            <h1 id="cardHeading"></h1>
+                            <h3 id="cardDescription"></h3>
+                        </div>
+                        <div class="card-text-bottom">
+                            <h2 id="cardLocation"></h2>
+                            <h2 id="cardPrice"></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img bl">
+                        <img class="card-img" id="card-img" src="media/pictures/duck banner.jpg">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-top">
+                            <h1>Me</h1>
+                            <h3>A funny looking duck with a knife. Rumors are said to be that this cute little duck is the owner of the duck cult. People make fun of his butter knifes are never seen again, its still has not been proven if this perosn was behind it or not since little to no evidence was found.</h3>
+                        </div>
+                        <div class="card-text-bottom">
+                            <h2>Unknown</h2>
+                            <h2>Not For Sale</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img bl">
+                        <img class="card-img" id="card-img" src="media/pictures/duck banner.jpg">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-top">
+                            <h1>Me</h1>
+                            <h3>A funny looking duck with a knife. Rumors are said to be that this cute little duck is the owner of the duck cult. People make fun of his butter knifes are never seen again, its still has not been proven if this perosn was behind it or not since little to no evidence was found.</h3>
+                        </div>
+                        <div class="card-text-bottom">
+                            <h2>Unknown</h2>
+                            <h2>Not For Sale</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img bl">
+                        <img class="card-img" id="card-img" src="media/pictures/duck banner.jpg">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-top">
+                            <h1>Me</h1>
+                            <h3>A funny looking duck with a knife. Rumors are said to be that this cute little duck is the owner of the duck cult. People make fun of his butter knifes are never seen again, its still has not been proven if this perosn was behind it or not since little to no evidence was found.</h3>
+                        </div>
+                        <div class="card-text-bottom">
+                            <h2>Unknown</h2>
+                            <h2>Not For Sale</h2>
+                        </div>
+                    </div>
+                </div> -->
+<!-- 
+                <div class="card">
+                    <div class="card-img bl">
+                        <img class="card-img" id="card-img" src="">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-text-top">
+                            <h1 id="cardHeading"></h1>
+                            <h3 id="cardDescription"></h3>
+                        </div>
+                        <div class="card-text-bottom">
+                            <h2 id="cardLocation"></h2>
+                            <h2 id="cardPrice"></h2>
+                        </div>
+                    </div>
+                </div> -->

@@ -1,0 +1,19 @@
+/* :root {
+    --lighttheme-color:#FFFFFF;
+    --lighttheme-main-bg:#111827;
+    --lighttheme-secondary-bg:#1F2937;
+    --lighttheme-border:#373f4b;
+} */
+
+:root {
+    --darktheme-main-bg:#111827;
+    --darktheme-secondary-bg:#1F2937;
+    --darktheme-color:#ffffff;
+    --darktheme-border:#373f4b;
+    
+}
+
+
+ /* {
+    color: var(--lighttheme-color);
+} */
