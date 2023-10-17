@@ -94,29 +94,29 @@ function list() {
   for (let i = 0; i < products[x].length; i++) {
     mainBody.innerHTML +=
       '<div class="card">' +
-      '<div class="card-img bl">' +
-      '<img class="card-img" id="card-img-' +
-      i +
-      '" src="">' +
-      "</div>" +
-      '<div class="card-text">' +
-      '<div class="card-text-top">' +
-      '<h1 id="cardHeading-' +
-      i +
-      '"></h1>' +
-      '<h3 id="cardDescription-' +
-      i +
-      '"></h3>' +
-      "</div>" +
-      '<div class="card-text-bottom">' +
-      '<h2 id="cardLocation-' +
-      i +
-      '"></h2>' +
-      '<h2 id="cardPrice-' +
-      i +
-      '"></h2>' +
-      "</div>" +
-      "</div>" +
+        '<div class="card-img bl">' +
+          '<img class="card-img" id="card-img-' +
+          i +
+          '" src="">' +
+        "</div>" +
+        '<div class="card-text">' +
+          '<div class="card-text-top">' +
+            '<h1 id="cardHeading-' +
+              i +
+              '"></h1>' +
+            '<h3 id="cardDescription-' +
+            i +
+            '"></h3>' +
+          "</div>" +
+          '<div class="card-text-bottom">' +
+            '<h2 id="cardLocation-' +
+            i +
+            '"></h2>' +
+            '<h2 id="cardPrice-' +
+            i +
+            '"></h2>' +
+          "</div>" +
+        "</div>" +
       "</div>";
 
     document.getElementById("card-img-" + i + "").src = products[x][i].url;

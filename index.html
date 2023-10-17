@@ -15,7 +15,7 @@
                 <div class="nav-logo">
                     <img class="nav-logo-img" src="media/icon/Untitled-1.png" alt="duck">
                 </div>
-                <div class="search-bar">
+                <div class="search-bar pc">
                     <input type="text" placeholder="Search" maxlength="100">
                 </div>
                 <div class="nav-text pc">
@@ -41,18 +41,32 @@
         </div>
     </header>
     
-    <section>
-        <div class="left-body">
+    <section class="sortsystem-sector">
+        <div id="closeSort" class="left-body mobile">
             <h1>Sort by</h1>
             <div class="filter-btns">
                 <button onclick="sortA()">Alphabet</button>
                 <button onclick="sortP()">Price</button>
             </div>
+            <div class="add">
+                <button class="add-btn" onclick="showCreate()">Add Your Own Card</button>
+            </div>
             <div class="duckfever">
                 <button class="duck-btn" onclick="changeMode()">Duck Fever Mode</button>
             </div>
+        </div>
+        </div>
+        <div class="left-body pc">
+            <h1>Sort by</h1>
+            <div class="filter-btns">
+                <button onclick="sortA()">Alphabet</button>
+                <button onclick="sortP()">Price</button>
+            </div>
             <div class="add">
                 <button class="add-btn" onclick="showCreate()">Add Your Own Card</button>
+            </div>
+            <div class="duckfever">
+                <button class="duck-btn" onclick="changeMode()">Duck Fever Mode</button>
             </div>
         </div>
         <div class="right-body">
@@ -82,7 +96,7 @@
                                 <div class="label-fillin">
                                 <label>Heading<span style="color: rgb(255, 0, 0);">*</span></label>
                                 </div>
-                                <input id="extactHeading" class="input" type="text" name="email" maxlength="20" placeholder="Product name" value="" required>
+                                <input id="extactHeading" class="input" type="text" name="email" maxlength="15" placeholder="Product name" value="" required>
                             </div>
                             <div class="inputbox">
                                 <div class="label-fillin">
